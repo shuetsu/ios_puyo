@@ -22,6 +22,19 @@
 		B072DDB818699789006AD769 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B072DD9718699789006AD769 /* UIKit.framework */; };
 		B072DDC018699789006AD769 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = B072DDBE18699789006AD769 /* InfoPlist.strings */; };
 		B072DDC218699789006AD769 /* puyoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B072DDC118699789006AD769 /* puyoTests.m */; };
+		B072DDCF186997B1006AD769 /* PuyoView.m in Sources */ = {isa = PBXBuildFile; fileRef = B072DDCE186997B1006AD769 /* PuyoView.m */; };
+		B072DDD2186997CA006AD769 /* PuyoBackground.m in Sources */ = {isa = PBXBuildFile; fileRef = B072DDD1186997CA006AD769 /* PuyoBackground.m */; };
+		B072DDD5186997EE006AD769 /* PuyoGame.m in Sources */ = {isa = PBXBuildFile; fileRef = B072DDD4186997EE006AD769 /* PuyoGame.m */; };
+		B072DDD91869B490006AD769 /* PuyoSceneTitle.m in Sources */ = {isa = PBXBuildFile; fileRef = B072DDD81869B490006AD769 /* PuyoSceneTitle.m */; };
+		B072DDDC1869CBC3006AD769 /* PuyoDraw.m in Sources */ = {isa = PBXBuildFile; fileRef = B072DDDB1869CBC3006AD769 /* PuyoDraw.m */; };
+		B072DDDF186AED32006AD769 /* PuyoPosition.m in Sources */ = {isa = PBXBuildFile; fileRef = B072DDDE186AED32006AD769 /* PuyoPosition.m */; };
+		B072DDE2186AFFED006AD769 /* PuyoLib.m in Sources */ = {isa = PBXBuildFile; fileRef = B072DDE1186AFFED006AD769 /* PuyoLib.m */; };
+		B072DDE5186B1040006AD769 /* PuyoStageMap.m in Sources */ = {isa = PBXBuildFile; fileRef = B072DDE4186B1040006AD769 /* PuyoStageMap.m */; };
+		B072DDE8186C6EB1006AD769 /* PuyoGestureRecognizer.m in Sources */ = {isa = PBXBuildFile; fileRef = B072DDE7186C6EB1006AD769 /* PuyoGestureRecognizer.m */; };
+		B07E8B2418713FB30081575D /* PuyoSceneOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = B07E8B2318713FB30081575D /* PuyoSceneOperation.m */; };
+		B07E8B2718765EC10081575D /* PuyoSceneDrop.m in Sources */ = {isa = PBXBuildFile; fileRef = B07E8B2618765EC10081575D /* PuyoSceneDrop.m */; };
+		B07E8B30187791420081575D /* PuyoSceneGameover.m in Sources */ = {isa = PBXBuildFile; fileRef = B07E8B2F187791420081575D /* PuyoSceneGameover.m */; };
+		B07E8B331878CF950081575D /* PuyoSceneDelete.m in Sources */ = {isa = PBXBuildFile; fileRef = B07E8B321878CF950081575D /* PuyoSceneDelete.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +68,33 @@
 		B072DDBD18699789006AD769 /* puyoTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "puyoTests-Info.plist"; sourceTree = "<group>"; };
 		B072DDBF18699789006AD769 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		B072DDC118699789006AD769 /* puyoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = puyoTests.m; sourceTree = "<group>"; };
+		B072DDCD186997B1006AD769 /* PuyoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PuyoView.h; sourceTree = "<group>"; };
+		B072DDCE186997B1006AD769 /* PuyoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PuyoView.m; sourceTree = "<group>"; };
+		B072DDD0186997CA006AD769 /* PuyoBackground.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PuyoBackground.h; sourceTree = "<group>"; };
+		B072DDD1186997CA006AD769 /* PuyoBackground.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PuyoBackground.m; sourceTree = "<group>"; };
+		B072DDD3186997EE006AD769 /* PuyoGame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PuyoGame.h; sourceTree = "<group>"; };
+		B072DDD4186997EE006AD769 /* PuyoGame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PuyoGame.m; sourceTree = "<group>"; };
+		B072DDD61869B3CA006AD769 /* PuyoScene.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PuyoScene.h; sourceTree = "<group>"; };
+		B072DDD71869B490006AD769 /* PuyoSceneTitle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PuyoSceneTitle.h; sourceTree = "<group>"; };
+		B072DDD81869B490006AD769 /* PuyoSceneTitle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PuyoSceneTitle.m; sourceTree = "<group>"; };
+		B072DDDA1869CBC3006AD769 /* PuyoDraw.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PuyoDraw.h; sourceTree = "<group>"; };
+		B072DDDB1869CBC3006AD769 /* PuyoDraw.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PuyoDraw.m; sourceTree = "<group>"; };
+		B072DDDD186AED32006AD769 /* PuyoPosition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PuyoPosition.h; sourceTree = "<group>"; };
+		B072DDDE186AED32006AD769 /* PuyoPosition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PuyoPosition.m; sourceTree = "<group>"; };
+		B072DDE0186AFFED006AD769 /* PuyoLib.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PuyoLib.h; sourceTree = "<group>"; };
+		B072DDE1186AFFED006AD769 /* PuyoLib.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PuyoLib.m; sourceTree = "<group>"; };
+		B072DDE3186B1040006AD769 /* PuyoStageMap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PuyoStageMap.h; sourceTree = "<group>"; };
+		B072DDE4186B1040006AD769 /* PuyoStageMap.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PuyoStageMap.m; sourceTree = "<group>"; };
+		B072DDE6186C6EB1006AD769 /* PuyoGestureRecognizer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PuyoGestureRecognizer.h; sourceTree = "<group>"; };
+		B072DDE7186C6EB1006AD769 /* PuyoGestureRecognizer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PuyoGestureRecognizer.m; sourceTree = "<group>"; };
+		B07E8B2218713FB30081575D /* PuyoSceneOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PuyoSceneOperation.h; sourceTree = "<group>"; };
+		B07E8B2318713FB30081575D /* PuyoSceneOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PuyoSceneOperation.m; sourceTree = "<group>"; };
+		B07E8B2518765EC10081575D /* PuyoSceneDrop.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PuyoSceneDrop.h; sourceTree = "<group>"; };
+		B07E8B2618765EC10081575D /* PuyoSceneDrop.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PuyoSceneDrop.m; sourceTree = "<group>"; };
+		B07E8B2E187791420081575D /* PuyoSceneGameover.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PuyoSceneGameover.h; sourceTree = "<group>"; };
+		B07E8B2F187791420081575D /* PuyoSceneGameover.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PuyoSceneGameover.m; sourceTree = "<group>"; };
+		B07E8B311878CF950081575D /* PuyoSceneDelete.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PuyoSceneDelete.h; sourceTree = "<group>"; };
+		B07E8B321878CF950081575D /* PuyoSceneDelete.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PuyoSceneDelete.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,13 +154,30 @@
 		B072DD9918699789006AD769 /* puyo */ = {
 			isa = PBXGroup;
 			children = (
+				B072DDAE18699789006AD769 /* Images.xcassets */,
+				B072DDA818699789006AD769 /* Main_iPad.storyboard */,
+				B072DDA518699789006AD769 /* Main_iPhone.storyboard */,
 				B072DDA218699789006AD769 /* PuyoAppDelegate.h */,
 				B072DDA318699789006AD769 /* PuyoAppDelegate.m */,
-				B072DDA518699789006AD769 /* Main_iPhone.storyboard */,
-				B072DDA818699789006AD769 /* Main_iPad.storyboard */,
+				B072DDD0186997CA006AD769 /* PuyoBackground.h */,
+				B072DDD1186997CA006AD769 /* PuyoBackground.m */,
+				B072DDDA1869CBC3006AD769 /* PuyoDraw.h */,
+				B072DDDB1869CBC3006AD769 /* PuyoDraw.m */,
+				B072DDD3186997EE006AD769 /* PuyoGame.h */,
+				B072DDD4186997EE006AD769 /* PuyoGame.m */,
+				B072DDE6186C6EB1006AD769 /* PuyoGestureRecognizer.h */,
+				B072DDE7186C6EB1006AD769 /* PuyoGestureRecognizer.m */,
+				B072DDE0186AFFED006AD769 /* PuyoLib.h */,
+				B072DDE1186AFFED006AD769 /* PuyoLib.m */,
+				B072DDDD186AED32006AD769 /* PuyoPosition.h */,
+				B072DDDE186AED32006AD769 /* PuyoPosition.m */,
+				B072DDE3186B1040006AD769 /* PuyoStageMap.h */,
+				B072DDE4186B1040006AD769 /* PuyoStageMap.m */,
+				B072DDCD186997B1006AD769 /* PuyoView.h */,
+				B072DDCE186997B1006AD769 /* PuyoView.m */,
 				B072DDAB18699789006AD769 /* PuyoViewController.h */,
 				B072DDAC18699789006AD769 /* PuyoViewController.m */,
-				B072DDAE18699789006AD769 /* Images.xcassets */,
+				B072DDCC18699795006AD769 /* scene */,
 				B072DD9A18699789006AD769 /* Supporting Files */,
 			);
 			path = puyo;
@@ -153,6 +210,24 @@
 				B072DDBE18699789006AD769 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		B072DDCC18699795006AD769 /* scene */ = {
+			isa = PBXGroup;
+			children = (
+				B072DDD61869B3CA006AD769 /* PuyoScene.h */,
+				B07E8B311878CF950081575D /* PuyoSceneDelete.h */,
+				B07E8B321878CF950081575D /* PuyoSceneDelete.m */,
+				B07E8B2518765EC10081575D /* PuyoSceneDrop.h */,
+				B07E8B2618765EC10081575D /* PuyoSceneDrop.m */,
+				B07E8B2E187791420081575D /* PuyoSceneGameover.h */,
+				B07E8B2F187791420081575D /* PuyoSceneGameover.m */,
+				B07E8B2218713FB30081575D /* PuyoSceneOperation.h */,
+				B07E8B2318713FB30081575D /* PuyoSceneOperation.m */,
+				B072DDD71869B490006AD769 /* PuyoSceneTitle.h */,
+				B072DDD81869B490006AD769 /* PuyoSceneTitle.m */,
+			);
+			name = scene;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -254,8 +329,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B072DDE8186C6EB1006AD769 /* PuyoGestureRecognizer.m in Sources */,
+				B072DDE5186B1040006AD769 /* PuyoStageMap.m in Sources */,
+				B072DDE2186AFFED006AD769 /* PuyoLib.m in Sources */,
+				B072DDDC1869CBC3006AD769 /* PuyoDraw.m in Sources */,
+				B07E8B30187791420081575D /* PuyoSceneGameover.m in Sources */,
+				B072DDD2186997CA006AD769 /* PuyoBackground.m in Sources */,
 				B072DDAD18699789006AD769 /* PuyoViewController.m in Sources */,
+				B072DDCF186997B1006AD769 /* PuyoView.m in Sources */,
 				B072DDA018699789006AD769 /* main.m in Sources */,
+				B072DDDF186AED32006AD769 /* PuyoPosition.m in Sources */,
+				B07E8B331878CF950081575D /* PuyoSceneDelete.m in Sources */,
+				B07E8B2418713FB30081575D /* PuyoSceneOperation.m in Sources */,
+				B072DDD5186997EE006AD769 /* PuyoGame.m in Sources */,
+				B072DDD91869B490006AD769 /* PuyoSceneTitle.m in Sources */,
+				B07E8B2718765EC10081575D /* PuyoSceneDrop.m in Sources */,
 				B072DDA418699789006AD769 /* PuyoAppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -475,6 +563,7 @@
 				B072DDC718699789006AD769 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B072DDC818699789006AD769 /* Build configuration list for PBXNativeTarget "puyoTests" */ = {
 			isa = XCConfigurationList;
@@ -483,6 +572,7 @@
 				B072DDCA18699789006AD769 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -14,3 +14,36 @@
     #import <UIKit/UIKit.h>
     #import <Foundation/Foundation.h>
 #endif
+
+#define PUYO_W 30
+#define PUYO_H 30
+
+#define STAGE_COLS 6
+#define STAGE_ROWS 12
+
+#define DROP_DELAY 1000
+#define DROP_SPEED_INITIAL 30
+#define DROP_SPEED_MAX 180
+
+typedef enum{
+    EPuyoNone,
+    EPuyoRed,
+    EPuyoBlue,
+    EPuyoYellow,
+    EPuyoGreen
+} EPuyoType;
+
+typedef enum{
+    EPuyoGestureNone,
+    EPuyoGestureTap,
+    EPuyoGestureSwipeLeft,
+    EPuyoGestureSwipeRight,
+    EPuyoGestureSwipeBelow
+} EPuyoGesture;
+
+typedef enum{
+    EPuyoRollAbove,
+    EPuyoRollRight,
+    EPuyoRollBelow,
+    EPuyoRollLeft
+} EPuyoRoll;
