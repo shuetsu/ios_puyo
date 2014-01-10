@@ -14,12 +14,6 @@
 #import "PuyoPosition.h"
 #import "PuyoSceneOperation.h"
 
-@interface linked : NSObject
-@property (nonatomic, assign)int count;
-@end
-@implementation linked
-@end
-
 @implementation PuyoSceneTitle
 
 - (id<PuyoScene>)doFrame:(PuyoGame*)game
