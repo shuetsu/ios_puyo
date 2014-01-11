@@ -33,6 +33,11 @@
     return self;
 }
 
+-(id<PuyoScene>)begin:(PuyoGame *)game
+{
+    return self;
+}
+
 - (id<PuyoScene>)doFrame:(PuyoGame *)game
 {
     if (_count < 50) {

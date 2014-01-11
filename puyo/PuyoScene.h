@@ -11,6 +11,7 @@
 @class PuyoGame;
 
 @protocol PuyoScene <NSObject>
+- (id<PuyoScene>)begin:(PuyoGame*)game;
 - (id<PuyoScene>)doFrame:(PuyoGame*)game;
 - (void)draw:(PuyoView*)puyoView game:(PuyoGame*)game;
 @end

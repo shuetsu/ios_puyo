@@ -22,13 +22,13 @@
     PuyoStageMap *_dropMap;
 }
 - (int)dropHeightLimit:(PuyoPosition*)pos;
-- (bool)dropped;
+- (bool)dropped:(PuyoGame*)game;
 - (void)updateStageMap:(PuyoGame*)game;
 @end
 
 @implementation PuyoSceneDrop
 
-- (id)initWithGame:(PuyoGame *)game chain:(int)chain
+- (id)initWithChain:(int)chain
 {
     self = [super init];
     if (self) {
@@ -36,14 +36,19 @@
         _dropHeight = 0;
         _dropSpeed = 0;
         _dropMap = [[PuyoStageMap alloc] initWithDefaultValue:@(0)];
-        for (int c = 0; c < STAGE_COLS; c++) {
-            int drop = 0;
-            for(int r = STAGE_ROWS - 1; r >= 0; r--){
-                PuyoPosition *pos = PuyoPositionMake(r, c);
-                [_dropMap put:pos value:@(drop)];
-                if ([[game.stageMap get:pos] integerValue] == EPuyoNone) {
-                    drop++;
-                }
+    }
+    return self;
+}
+
+- (id<PuyoScene>)begin:(PuyoGame *)game
+{
+    for (int c = 0; c < STAGE_COLS; c++) {
+        int drop = 0;
+        for(int r = STAGE_ROWS - 1; r >= 0; r--){
+            PuyoPosition *pos = PuyoPositionMake(r, c);
+            [_dropMap put:pos value:@(drop)];
+            if ([[game.stageMap get:pos] integerValue] == EPuyoNone) {
+                drop++;
             }
         }
     }
@@ -54,9 +59,9 @@
 {
     _dropHeight += _dropSpeed;
     _dropSpeed++;
-    if ([self dropped]) {
+    if ([self dropped:game]) {
         [self updateStageMap:game];
-        return [[PuyoSceneDelete alloc] initWithGame:game chain:_chain];
+        return [[PuyoSceneDelete alloc] initWithChain:_chain];
     }else{
         return self;
     }
@@ -83,14 +88,16 @@
     return [[_dropMap get:pos] intValue] * PUYO_H;
 }
 
-- (bool)dropped
+- (bool)dropped:(PuyoGame*)game
 {
     for (int c = 0; c < STAGE_COLS; c++) {
         for (int r = 0; r < STAGE_ROWS; r++) {
             PuyoPosition *pos = PuyoPositionMake(r, c);
-            int limit = [self dropHeightLimit:pos];
-            if (_dropHeight < limit) {
-                return false;
+            if ([[game.stageMap get:pos] intValue] != EPuyoNone) {
+                int limit = [self dropHeightLimit:pos];
+                if (_dropHeight < limit) {
+                    return false;
+                }
             }
         }
     }

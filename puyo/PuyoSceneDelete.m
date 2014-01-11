@@ -14,7 +14,6 @@
 #import "PuyoGame.h"
 #import "PuyoSceneOperation.h"
 #import "PuyoSceneDrop.h"
-#import "PuyoSceneGameover.h"
 
 @interface PuyoLinkCount : NSObject
 @property (nonatomic, assign) int count;
@@ -43,15 +42,24 @@
 
 @implementation PuyoSceneDelete
 
-- (id)initWithGame:(PuyoGame *)game chain:(int)chain
+- (id)initWithChain:(int)chain
 {
     self = [super init];
     if (self) {
         _chain = chain;
         _count = 0;
-        [self deleteLinkedPuyos:game];
     }
     return self;
+}
+
+-(id<PuyoScene>)begin:(PuyoGame *)game
+{
+    [self deleteLinkedPuyos:game];
+    if (_deletedPuyosPos.count > 0) {
+        return self;
+    }else{
+        return [[[PuyoSceneOperation alloc] init] begin:game];
+    }
 }
 
 - (void)deleteLinkedPuyos:(PuyoGame*)game
@@ -120,22 +128,11 @@
 
 -(id<PuyoScene>)doFrame:(PuyoGame *)game
 {
-    if (_deletedPuyosPos.count > 0) {
-        if (_count == 10) {
-            return [[PuyoSceneDrop alloc] initWithGame:game chain:(_chain + 1)];
-        }else{
-            _count++;
-            return self;
-        }
+    if (_count == 10) {
+        return [[PuyoSceneDrop alloc] initWithChain:(_chain + 1)];
     }else{
-        if ([[game.stageMap get:PuyoPositionMake(0, 2)] intValue] > EPuyoNone) {
-            return [[PuyoSceneGameover alloc] init];
-        }else{
-            if (game.dropSpeed < DROP_SPEED_MAX) {
-                game.dropSpeed++;
-            }
-            return [[PuyoSceneOperation alloc] initWithGame:game];
-        }
+        _count++;
+        return self;
     }
 }
 

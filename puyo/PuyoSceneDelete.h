@@ -11,5 +11,5 @@
 @class PuyoGame;
 
 @interface PuyoSceneDelete : NSObject<PuyoScene>
-- (id)initWithGame:(PuyoGame*)game chain:(int)chain;
+- (id)initWithChain:(int)chain;
 @end

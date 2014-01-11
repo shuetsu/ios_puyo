@@ -11,5 +11,4 @@
 @class PuyoGame;
 
 @interface PuyoSceneOperation : NSObject<PuyoScene>
-- (id)initWithGame:(PuyoGame*)game;
 @end

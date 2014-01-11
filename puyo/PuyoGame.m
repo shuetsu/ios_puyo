@@ -38,7 +38,9 @@
 
 - (void)doFrame
 {
-    _scene = _nextScene;
+    if (_nextScene != _scene) {
+        _scene = [_nextScene begin:self];
+    }
     _nextScene = [_scene doFrame:self];
     [_background doFrame:self];
     [_gestureRecognizer doFrame];

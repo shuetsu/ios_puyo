@@ -14,6 +14,7 @@
 #import "PuyoLib.h"
 #import "PuyoDraw.h"
 #import "PuyoSceneDrop.h"
+#import "PuyoSceneGameover.h"
 
 @interface PuyoSceneOperation()
 {
@@ -30,7 +31,7 @@
 
 @implementation PuyoSceneOperation
 
-- (id)initWithGame:(PuyoGame *)game
+- (id)init
 {
     self = [super init];
     if (self){
@@ -44,6 +45,18 @@
     return self;
 }
 
+- (id<PuyoScene>)begin:(PuyoGame *)game
+{
+    if ([[game.stageMap get:PuyoPositionMake(0, 2)] intValue] > EPuyoNone) {
+        return [[[PuyoSceneGameover alloc] init] begin:game];
+    }else{
+        if (game.dropSpeed < DROP_SPEED_MAX) {
+            game.dropSpeed++;
+        }
+        return self;
+    }
+}
+
 - (id<PuyoScene>)doFrame:(PuyoGame *)game
 {
     if (game.gestureRecognizer.gesture == EPuyoGestureTap) {
@@ -54,11 +67,11 @@
         [self updatePuyoPos:[_puyoPos1 getRight] roll:_puyoRoll stageMap:game.stageMap];
     }else if (game.gestureRecognizer.gesture == EPuyoGestureSwipeBelow){
         while ([self dropPuyo:game]) {}
-        return [[PuyoSceneDrop alloc] initWithGame:game chain:0];
+        return [[PuyoSceneDrop alloc] initWithChain:0];
     }
     if (_dropDelay <= 0){
         if (![self dropPuyo:game]) {
-            return [[PuyoSceneDrop alloc] initWithGame:game chain:0];
+            return [[PuyoSceneDrop alloc] initWithChain:0];
         }
         _dropDelay += DROP_DELAY;
     }else{

@@ -16,11 +16,16 @@
 
 @implementation PuyoSceneTitle
 
+- (id<PuyoScene>)begin:(PuyoGame *)game
+{
+    return self;
+}
+
 - (id<PuyoScene>)doFrame:(PuyoGame*)game
 {
     if (game.gestureRecognizer.gesture == EPuyoGestureTap) {
         [game stageInit];
-        return [[PuyoSceneOperation alloc] initWithGame:game];
+        return [[PuyoSceneOperation alloc] init];
     }else{
         return self;
     }
