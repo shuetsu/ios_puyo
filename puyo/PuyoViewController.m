@@ -34,7 +34,7 @@
                  game:_game];
     [self.view addSubview:_puyoView];
     
-    [NSTimer scheduledTimerWithTimeInterval:0.02f
+    [NSTimer scheduledTimerWithTimeInterval:0.0167f
                                      target:self
                                    selector:@selector(doFrame:)
                                    userInfo:NULL

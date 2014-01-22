@@ -22,7 +22,7 @@
 #define STAGE_ROWS 12
 
 #define DROP_DELAY 1000
-#define DROP_SPEED_INITIAL 30
+#define DROP_SPEED_INITIAL 20
 #define DROP_SPEED_MAX 180
 
 typedef enum{
